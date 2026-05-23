@@ -1,6 +1,3 @@
-# transcript-intelligence-pipeline-raghu
-transcript-intelligence-pipeline-raghu
-
 # Transcript Intelligence Analysis Pipeline
 
 ## Project Overview
@@ -33,17 +30,113 @@ This project explores how NLP and clustering techniques can transform raw meetin
 
 ---
 
-# Dataset Structure
+# Installation
 
-Each meeting is stored as a separate folder containing multiple JSON files.
+Clone the repository:
 
-Example:
+```bash
+git clone <your-github-repo>
+cd transcript-intelligence
+```
 
-```text
-data/raw/
-├── meeting-folder-1/
-│   ├── transcript.json
-│   ├── summary.json
-│   ├── meeting-info.json
-│   ├── speakers.json
-│   └── events.json
+Create virtual environment:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Running the Project
+
+Start Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+Recommended execution order:
+
+1. 01_exploration.ipynb
+2. 02_topic_clustering.ipynb
+3. 03_sentiment_analysis.ipynb
+4. 04_final_insights.ipynb
+
+---
+
+# Topic Clustering
+
+Meeting summaries were converted into semantic embeddings using Sentence Transformers.
+
+HDBSCAN clustering was then used to identify semantically related meeting groups.
+
+Example discovered categories:
+- Engineering Reviews
+- Customer Escalations
+- Product Planning
+- Security & Compliance
+
+---
+
+# Sentiment Analysis
+
+Sentiment scores were analyzed across meeting categories to identify behavioral and operational trends.
+
+Example findings:
+- Escalation-oriented meetings showed lower sentiment
+- Product planning meetings were generally more positive
+- Longer meetings trended toward neutral sentiment
+
+---
+
+# Visualization
+
+The project includes:
+- Topic distribution charts
+- UMAP cluster visualizations
+- Sentiment trend analysis
+- Meeting duration analysis
+
+UMAP was used to reduce embedding vectors from 384 dimensions into 2D visual space while preserving semantic similarity relationships.
+
+---
+
+# Additional Opportunities
+
+Potential future enhancements include:
+- Speaker dominance analysis
+- Risk keyword detection
+- Decision velocity tracking
+- Organizational collaboration analysis
+- Real-time transcript processing
+- RAG-based semantic meeting search
+
+---
+
+# Limitations
+
+Current limitations include:
+- relatively small dataset size
+- manual interpretation of clusters
+- limited speaker-level analytics
+- dependence on summary quality
+
+---
+
+# Technologies Used
+
+- Python
+- Pandas
+- Sentence Transformers
+- HDBSCAN
+- Scikit-learn
+- UMAP
+- Matplotlib
+- Jupyter Notebook
