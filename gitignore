@@ -1,0 +1,49 @@
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Model cache (optional)
+.cache/
+
+# Data files (optional if dataset should not be uploaded)
+data/raw/
+
+# OS generated files
+Thumbs.db
+
+# Matplotlib cache
+.matplotlib/
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# Build artifacts
+dist/
+build/
