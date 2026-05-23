@@ -1,49 +1,23 @@
-# Virtual Environment
-venv/
-
-# Python cache
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
 
-# macOS files
-.DS_Store
-
-# VS Code settings
-.vscode/
-
-# Environment variables
+# Sensitive Information (API keys, etc.)
 .env
 
-# Logs
-*.log
+# NLP/Data Specific (Optional - ignore large datasets)
+data/
+*.zip
+*.tar.gz
 
-# Temporary files
-*.tmp
-
-# Model cache (optional)
-.cache/
-
-# Data files (optional if dataset should not be uploaded)
-data/raw/
-
-# OS generated files
-Thumbs.db
-
-# Matplotlib cache
-.matplotlib/
-
-# Pytest cache
-.pytest_cache/
-
-# Coverage reports
-htmlcov/
-.coverage
-
-# Build artifacts
-dist/
-build/
+# IDE/Editor files
+.vscode/
+.idea/
+.DS_Store
